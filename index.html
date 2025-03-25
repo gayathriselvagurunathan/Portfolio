@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: "Courier";
+            margin: 10px;
+            padding: 5px;
+            background-color: #000;
+        }
+
+        header {
+            background-color: black;
+            color: #00ffb3;
+            text-align: center;
+            padding: 25px;
+            position: relative; /* Add this */
+            margin:15px;
+            border-radius:20px;
+        }
+
+        .header-content h1 {
+            font-size: 2.8rem;
+            padding: 15px;
+        }
+
+        /* Add styles for the round profile picture */
+        .profile-picture {
+            width: 90px; /* Adjust the size as needed */
+            height: 90px;
+            border-radius: 75%; /* Create a circular shape */
+            object-fit: cover; /* To ensure the image fills the circular area */
+            position: absolute; /* Add this */
+            top: 75px; /* Adjust top position as needed */
+            left: 75px; /* Adjust left position as needed */
+        }
+
+        nav {
+            background-color: #20f3c9;
+            color: #fff;
+            text-align: center;
+            padding: 8px;
+            margin: 8px;
+            border-radius: 15px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .section-content {
+            background: linear-gradient(320deg, lightseagreen, #f702a5);
+            padding: 2rem;
+            margin: 1.5rem;
+            border-radius: 20px;
+            box-shadow: 8px 8px 20px rgba(8, 225, 106, 0.4);
+            text-align: justify;
+            font-weight: bold;
+            font-size: medium;
+        }
+
+        .download-button {
+            background-color: #000000;
+            color: #fff;
+            padding: 1rem 2.5rem;
+            text-decoration:dashed;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+            align-self: center;
+        }
+
+        .download-button:hover {
+            background-color: #e700a2;
+            box-shadow:10px 10px 5px #000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #333;
+            color: #fff;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <!-- Add your profile picture here -->
+            <img src="photo.jpeg" alt="Your Profile Picture" class="profile-picture">
+            <h1>GAYATHRI S</h1>
+            <p style="font-size: 30px;">BCA</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+           
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p>Hi, I'm<b> Gayathri S</b>, a Computer Science student currently pursuing my Bachelor of Computer Application at the University of Madras. I have a strong passion for technology, coding, and problem-solving and enjoy exploring various programming languages and concepts.
+
+                I have experience working with C++, Python, JavaScript, HTML, CSS, and SQL, and I am actively learning Data Structures and Algorithms (DSA) to strengthen my problem-solving skills. I am also interested in web development, databases, and software development and love experimenting with new technologies.
+                
+                Apart from coding, I have a keen interest in article writing. Writing allows me to express my thoughts creatively and communicate technical concepts effectively.
+                
+                I am always eager to learn, build projects, and collaborate on new ideas. My goal is to continuously grow as a tech enthusiast and contribute meaningfully to the field of computer science.</p>
+
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="section-content">
+            <h2>Education</h2>
+            <p> University of Madras  - BCA<br>
+                <i>July 2023 - April 2026</i> (Expected)</p>
+            
+            
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-content">
+            <h2>Skills</h2>
+            <ul>
+                <li>Mern</li>
+                <li>Cloud Computing</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>C++</li>
+                <li>Java script</li>
+                <li>Web technologies</li>
+                <li>Data Structures and Algorithms</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-content">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="#">Personal portfolio</a></li>
+                <li><a href="#">Theme clock</a></li>
+                
+                <!-- Add more project links here -->
+            </ul>
+        </div>
+    </section>
+
+    <section id="resume">
+    
+        <div class="section-content">
+            <center>
+            <h2>Resume</h2>
+            <a href="resume.pdf" target="_blank" class="download-button">Download CV</a>
+        </center>
+        </div>
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2025 GAYATHRI S</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling to section when clicking on navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
